@@ -16,6 +16,7 @@ const Header = () => {
     setIsMenuOpen(false); // Fecha o menu mobile após clicar
   };
 
+  // Menu items
   const menuItems = [
     { id: "hero", label: "Início" },
     { id: "problem", label: "Problema" },
