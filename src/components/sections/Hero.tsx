@@ -2,7 +2,7 @@ import { useState } from "react";
 import BlurText from "../ui/BlurText";
 import { FaArrowRight } from "react-icons/fa";
 import Lottie from "react-lottie";
-import heroAnimation from "../../assets/Ghostsmart.json";
+import heroAnimation from "../../assets/AI Tools.json";
 
 const Hero = () => {
   const [isFinishedFirstHeadline, setIsFinishedFirstHeadline] = useState(false);
@@ -85,15 +85,10 @@ const Hero = () => {
           </div>
 
           <div className="flex-1">
-            {/* <img
-              src="/hero_image.png"
-              alt="Hero Image"
-              className="w-full h-full object-cover gentle-bounce"
-            /> */}
             <Lottie
               options={defaultOptions}
-              height={400}
-              width={400}
+              // height={400}
+              // width={600}
               isStopped={false}
               isPaused={false}
             />
