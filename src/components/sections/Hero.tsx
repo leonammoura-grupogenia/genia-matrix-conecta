@@ -1,11 +1,22 @@
 import { useState } from "react";
 import BlurText from "../ui/BlurText";
 import { FaArrowRight } from "react-icons/fa";
+import Lottie from "react-lottie";
+import heroAnimation from "../../assets/Ghostsmart.json";
 
 const Hero = () => {
   const [isFinishedFirstHeadline, setIsFinishedFirstHeadline] = useState(false);
   const [isFinishedSecondHeadline, setIsFinishedSecondHeadline] =
     useState(false);
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: heroAnimation,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
   return (
     <div className="w-full relative flex items-center min-h-[75vh] overflow-hidden">
@@ -74,10 +85,17 @@ const Hero = () => {
           </div>
 
           <div className="flex-1">
-            <img
+            {/* <img
               src="/hero_image.png"
               alt="Hero Image"
               className="w-full h-full object-cover gentle-bounce"
+            /> */}
+            <Lottie
+              options={defaultOptions}
+              height={400}
+              width={400}
+              isStopped={false}
+              isPaused={false}
             />
           </div>
         </div>
